@@ -1,0 +1,716 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <!-- google font icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- local css file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+ <body background="https://cdn4.site-media.eu/images/0/5465393/ScreenShot2021-07-07at2.50.30PM.png">
+<style>
+{
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+/* css variables */
+  :root {
+    --white: #fff;
+    --dark-gray: #ababab;
+    --light-gray: #808080;
+    --dark-bg: #222222;
+    --light-bg: #333333;
+    --yellow: #bac964;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: var(--light-bg);
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    background-repeat: repeat-x;
+  }
+  
+  section {
+    padding: 28rem 20%;
+  }
+  
+  .heading {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+    padding-bottom: 1rem;
+
+  }
+  
+  .heading span {
+    font-weight: 300;
+  }
+  
+  .btn {
+    background-color: var(--yellow);
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-right: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .home .home-text {
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 200;
+    line-height: 1.2;
+    
+
+  }
+  
+  .home .home-text span {
+    font-weight: 800;
+  }
+  
+  .home p{
+    padding-left: 90px;
+    padding-bottom: 10px;
+    font-family: arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 500;
+    right: 0;
+    padding: 10rem 15%;
+    z-index: 100;
+  }
+  
+  .header.active {
+    background-color: var(--white);
+    padding: 3rem 9%;
+  }
+  
+  .header.active .navbar a {
+    color: var(--dark-bg);
+  }
+  
+  
+  
+  .header.active .menu {
+    color: var(--white);
+  }
+  
+  .header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  
+  .header .navbar a {
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 0 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+/* about */
+
+.about .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+  padding: 5rem;
+  background-color: darkblue;
+}
+
+.about .box-container .box p {
+  color: var(--white);
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-transform: none;
+ 
+}
+/* about */
+
+  .resume .col-container .col .box {
+    background-color: var(--light-bg);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .resume .col-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem;
+  }
+  
+  .resume .col-container .col h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 200;
+    padding-bottom: 2rem;
+  }
+  
+  .resume .col-container .col .box span {
+    color: var(--white);
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .resume .col-container .col .box span i {
+    padding-right: 0.5rem;
+    font-size: 1.7rem;
+  }
+  
+  .resume .col-container .col .box h3 {
+    color: var(--yellow);
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+  
+  .resume .col-container .col .box p {
+    font-size: 1.7rem;
+    color: var(--light-gray);
+    margin-top: 1rem;
+    line-height: 1.5;
+    text-transform: none;
+  }
+  
+  .resume .col-container .col .box .university {
+    color: var(--white);
+    text-transform: capitalize;
+  }
+ 
+ .resume.active .navbar a:hover {
+    color: var(-- yellow);
+    text align: center;
+  }
+  
+
+
+
+
+  /* Certifications */
+.certificate .box-container .box .image {
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .certificate .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .certificate .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+  }
+  
+  .certificate .box-container .box {
+    background-color: var(--light-bg);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .certificate .box-container .box:hover .image img {
+    transform: scale(1.2);
+  }
+  
+  .certificate .box-container .box .image .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--light-bg);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+  }
+  
+  .certificate .box-container .box .image .content h2 {
+    font-size: 2rem;
+    color: var(--white);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  
+  .certificate .box-container .box:hover .image .content {
+    transform: translateY(0);
+  }
+  /* certifications */
+
+/* projects */
+
+.Projects .col-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.Projects .col-container .col .box h3 {
+  color: var(--white);
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-transform: none;
+}
+.Projects .col-container .box p {
+  color: var(--white);
+  font-size: 1.5rem;
+ margin-bottom: 2rem;
+  align-font: center;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  text-transform: none;
+}
+.Projects .col-container .col h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 200;
+    padding-bottom: 2rem;
+  }
+
+
+  .Projects .box-container .box .image img {
+    width: 60%;
+    height: 95%;
+    object-fit: cover;
+  }
+  
+  .Projects .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 2rem;
+  }
+  .Projects .box-container .box .content a{
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 100;
+    padding-left: 10rem; 
+  }
+/* projects */
+
+
+
+
+  /* contact */
+.contact .col-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+  }
+  
+  .contact .col-container .col h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 200;
+    padding-bottom: 5rem;
+  }
+  
+  .contact .col-container .col input,
+  .contact .col-container .col textarea {
+    background-color: var(--light-bg);
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    margin: 0.5rem 0;
+    resize: vertical;
+  }
+  
+  .contact .col-container .col p {
+    font-size: 1.7rem;
+    color: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  
+  .contact .col-container .col span {
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: 0.1rem;
+  }
+  /* contact */
+  /* footer */
+.footer {
+    border-top: rem solid var(--light-bg);
+    text-align: center;
+  }
+  
+  .footer .socials ion-icon {
+    font-size: 2.5rem;
+    
+    background-color: var(--light-bg);
+    border-radius: 30%;
+    padding: 3rem;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  
+ 
+  /* footer */
+  /* media queries */
+@media (max-width: 1200px) {
+    .header {
+      padding: 3rem 2rem;
+    }
+  
+    .header.active {
+      padding: 2rem;
+    }
+  
+    section {
+      padding: 3rem 2rem;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header .menu {
+      display: block;
+    }
+  
+    .header .navbar {
+      position: fixed;
+      top: 6rem;
+      left: 0;
+      right: 0;
+      background-color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+    }
+  
+    .header .navbar.show {
+      transform: translateX(0);
+    }
+  
+    .header .navbar a {
+      color: var(--dark-bg);
+      margin: 0;
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .home .hero-text {
+      font-size: 6rem;
+    }
+  }
+  /* media queries */
+  
+
+</style>
+
+
+    <!-- ion icons import -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- local js file -->
+    <script src="script.js"></script>
+  
+<!-- header section starts -->
+<header class="header">
+   
+        <nav class="navbar">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#certificate">Certificate</a>
+          <a href="#Projects">Projects</a>
+          <a href="#contact">Contact</a></nav>
+        </nav>
+      </header>
+      <!-- header section ends -->
+      <!-- home section starts -->
+      <section class="home" id="home">
+          <h1 class="home-text">
+            Welcome to my Portfolio website, I'm <br />
+            <span>Shaik Rizwana</span>
+          </h1>
+          <p class="par">"Aspiring a Data Analyst | Transforming Passion into Insights"</p>
+        </section>
+        <!-- home section ends -->
+        <!-- about section starts -->
+      <section class="about" id="about">
+          <div class="box-container">
+           
+        
+            <div class="box">
+              <h1 class="heading">About <span>Me</span></h1>
+              <p>
+                I'm Shaik Rizwana an MCA graduate passionate about Data Analyst. I've got a strong technical foundation in Visualization, programming and databases. 
+          Proficient in Python and SQL, I'm eager to turn complex data into actionable insights. I believe in continuous learning . </p>
+          <p>I am actively seeking opportunities in the field of data analysis, where I can leverage my analytical
+                 mindset and technical prowess. If you're looking for a dedicated and quick-learning data analyst, let's connect and explore the possibilities!
+            </p>
+            
+              <a href="#" class="btn">hire me</a>
+              
+            </div>
+          </div>
+        </section>
+        <!-- about section ends -->
+        <!-- resume section starts -->
+      <section class="resume" id="resume">
+          <h1 class="heading">My <span>Resume</span></h1>
+          <div class="col-container">
+            <div class="col">
+              <h2>Education</h2>
+              <div class="box">
+                <span><i class="material-icons"> </i> 2021 - 2023</span>
+                <h3>MCA</h3>
+                <p>Masters of Computer Applications specialized in Computer Science and Informatics
+              </br>
+                  Aggregate:8.5GPA
+                </p>
+                <p class="University">Mahatma Gandhi University-Nalgonda</p>
+              </div>
+      
+              <div class="box">
+                <span><i class="material-icons"> </i> 2018 - 2021</span>
+                <h3>B.Sc</h3>
+                <p>
+                  Bachelor of Science in Mathematics,Physics and Computer Science</br>
+              Aggregate:8.28GPA
+                </p>
+                <p class="university">Kakatiya University-Warangal</p>
+              </div>
+        
+              <div class="box">
+                <span><i class="material-icons"> </i> 2016 - 2018</span>
+                <h3>Inter</h3>
+                <p>
+                 Intermediate with Maths,Physics and Chemistry</br>
+              Aggregate:808 Marks
+                </p>
+                <p class="university">Madhu Junior College-Khammam</p>
+              </div>
+        
+              <div class="box">
+                <span><i class="material-icons"> </i> 2015 - 2016</span>
+                <h3>SSC</h3>
+                <p>
+                  Aggregate:8.2GPA
+                </p>
+                <p class="university">Madhu Vidyalayam-Khammam</p>
+              </div>
+                  
+      <a href="https://www.canva.com/design/DAF05gIUqHs/0e8JcoSr3J8gWU0L-eiUnQ/view?utm_content=DAF05gIUqHs&utm_campaign=designshare&utm_medium=link&utm_source=editor" class="btn">Download Resume</a>
+            </div>
+            
+        </section>
+        <!-- resume section ends -->
+      
+        <!-- Certifications section starts -->
+      <section class="certificate" id="certificate">
+          <h1 class="heading">Featured <span>Certificate</span></h1>
+        
+          <div class="box-container">
+         <div class="box">
+              <div class="image">
+                <img src="C:\Users\LENOVO\Downloads\Data_Analytics_Essentials.jpg" alt="" />
+                <div class="content">
+                  <h2>Data Analytics Essentials</h2>
+                </div>
+              </div>
+            </div>
+             <div class="box">
+              <div class="image">
+                <img src="https://courses.cognitiveclass.ai/certificates/77e582b5c701481399534b2ed0a00db0" alt="" />
+                <div class="content">
+                  <h2>Python for Data Science</h2>
+                </div>
+              </div>
+            </div>
+             <div class="box">
+              <div class="image">
+                <img src="https://media.licdn.com/dms/image/sync/D5627AQHyMMi1iA7hUA/articleshare-shrink_1280_800/0/1700975148286?e=1701583200&v=beta&t=lmKKz1kY63hEskkFJTgN6thF0CFr8VL-8ROXg_gTH4Q" alt="" />
+                <div class="content">
+                  <h2>Data Visualization with Power Bi</h2>
+                </div>
+              </div>
+            </div>
+        
+            <div class="box">
+              <div class="image">
+                <img src="https://d9jmtjs5r4cgq.cloudfront.net/ComplementaryCourseCertificate/3662789/original/Shaik_Rizwana20231111-72-z74v9j.jpg" alt="" />
+                <div class="content">
+                  <h2>Data Analysis using Excel</h2>
+                </div>
+              </div>
+            </div>
+        
+            <div class="box">
+              <div class="image">
+                <img src="https://media.licdn.com/dms/image/sync/D5627AQFauIch5RBExQ/articleshare-shrink_1280_800/0/1700714059222?e=1701320400&v=beta&t=Oi7W1FYtR38EquktNipm5ifBjxNPBSfy9p-4PivYDj4" alt="" />
+                <div class="content">
+                  <h2>MySQL</h2>
+                </div>
+              </div>
+            </div>
+        
+            <div class="box">
+              <div class="image">
+                <img src="https://media.licdn.com/dms/image/sync/C5627AQGhCpnElCJP5g/articleshare-shrink_1280_800/0/1679901484842?e=1701320400&v=beta&t=yIPjgprGLHp2ArCZMPTchFVhGfX7xWBR8y4pxCKkDcg" alt="" />
+                <div class="content">
+                  <h2>HTML</h2>
+                </div>
+              </div>
+            </div>
+        
+            <div class="box">
+              <div class="image">
+                <img src="https://media.licdn.com/dms/image/sync/D5627AQG13J8P0txthQ/articleshare-shrink_1280_800/0/1685624579741?e=1701320400&v=beta&t=U_SZ8poqrC809NK-Md5CbiLDho9w_qYFGs1AWAo5KOo" alt="" />
+                <div class="content">
+                  <h2>Basics of Java</h2>
+                </div>
+              </div>
+            </div>
+         </div>
+        </section>
+        <!-- Certifications section ends -->
+      
+      
+        <!-- project  section starts -->
+      <section class="Projects" id="Projects">
+          <h1 class="heading">My <span>Projects</span></h1>
+          <div class="col-container">
+             <div class="col">
+          <h2>Acadamic Project</h2>
+                 <div class="box">
+                <h3>Project Title - KNOWLEDGE BASED APPROACH TO DETECT POTENTIALLY RISKY WEBSITES</h3>
+                <p>
+              Overview: This Project aims the internet safer using Knowledge and Technology</br>
+                  to detect risky websites and The "Knowledge-Based Approach to Detect Potentially Risky Websites" project utilizes a data-driven methodology, 
+          incorporating a diverse knowledge base and advanced algorithms to evaluate websites for potential risks. By considering factors </br>such as historical data, 
+          user interactions, and emerging threat patterns, the system provides a robust mechanism for identifying and categorizing risky websites. The project focuses on real-time monitoring, employing machine learning for adaptive risk detection and a user-friendly interface, contributing to effective and informed decision-making in online security.
+                </p>
+               </div>
+          <h2>Dashboards</h2>
+         <div class="box-container">
+            <div class="box">
+              <div class="image">
+                <img src="C:\Certificates\covid-19.PNG" alt="" />
+                <div class="content">
+                  <a href="https://1drv.ms/u/s!AtU_Gr6EQQR1iXtB39g83Nut1yY7?e=qugzcI" 
+      target="_blank" rel="noopener noreferrer">View Covid-19 Dashboard</a>
+                </div>
+              </div>
+            </div>
+              </div>
+      </section>
+      <!-- project  section ends -->
+      
+        <!-- contact section starts -->
+      <section class="contact" id="contact">
+          <h1 class="heading">Get <span>in touch</span></h1>
+          <div class="col-container">
+            <div class="col">
+              <h2>Get in touch</h2>
+              <input type="text" placeholder="your name" />
+              <input type="email" placeholder="your email" />
+              <input type="text" placeholder="your phone" />
+              <textarea name="" placeholder="write a message" id="" cols="30" rows="10"></textarea>
+              <a href="#" class="btn">send message</a>
+            </div>
+        
+            <div class="col">
+              <h2>My Contact Details</h2>
+              <p>email</p>
+              <span>shaikrizwana19062001@gmail.com</span>
+              <br />
+              <br />
+              <p>phone</p>
+              <span>+91 7799475307</span>
+              <br />
+              <br />
+              <p>address</p>
+              <span>
+                Wyra, 
+                Khammam(Dist), <br />
+                Telangana State.
+              </span>
+            </div>
+          </div>
+        </section>
+        <!-- contact section ends -->
+        <!-- footer section starts -->
+      <section class="footer" id="footer">
+          <div class="socials">
+            <a href="https://www.gmail.com" class="btn"> <ion-icon name="logo-google"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/shaik-rizwana1/" class="btn"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+          
+        </section>
+        <!-- footer section ends -->
+      
+      </body>
+      </html>
+
+
+              

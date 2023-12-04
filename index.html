@@ -151,6 +151,10 @@
   }
 
 /* about */
+.about{
+  background-color: white;
+  padding: 20px;
+}
 
 .about .box-container {
   display: grid;
@@ -158,6 +162,7 @@
   gap: 1rem;
   padding: 5rem;
   background-color: darkblue;
+
 }
 
 .about .box-container .box p {
@@ -167,9 +172,18 @@
   letter-spacing: 0.1rem;
   line-height: 1.5;
   text-transform: none;
+  text-align: justify;
+    
  
 }
 /* about */
+.section-divider {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+.resume{
+    padding: 20px;
+  }
 
   .resume .col-container .col .box {
     background-color: var(--light-bg);
@@ -228,9 +242,17 @@
     text align: center;
   }
   
-
-
-
+.section-divider {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
+.Certificate{
+    padding: 20px;
+    background-color: white;
+  }
+.certificate h1{
+  color: #000000;
+}
 
   /* Certifications */
 .certificate .box-container .box .image {
@@ -285,7 +307,15 @@
     transform: translateY(0);
   }
   /* certifications */
+.section-divider {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
 
+  /* contact */
+  .Projects {
+    padding: 20px;
+  }
 /* projects */
 
 .Projects .col-container {
@@ -293,6 +323,7 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1rem;
   padding: 5rem;
+  text-align: justify;
 }
 
 .Projects .col-container .col .box h3 {
@@ -311,6 +342,7 @@
   letter-spacing: 0.1rem;
   line-height: 1.5;
   text-transform: none;
+
 }
 .Projects .col-container .col h2 {
     font-size: 2.5rem;
@@ -321,9 +353,10 @@
 
 
   .Projects .box-container .box .image img {
-    width: 60%;
+    width: 65%;
     height: 95%;
     object-fit: cover;
+     padding: 2rem;
   }
   
   .Projects .box-container {
@@ -331,22 +364,30 @@
     grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
     gap: 2rem;
   }
-  .Projects .box-container .box .content a{
-    font-size: 2rem;
+  .Projects .box-container .box .content a {
+    font-size: 2.5rem;
     color: var(--white);
     font-weight: 100;
-    padding-left: 10rem; 
+    padding: 20rem; 
   }
 /* projects */
 
 
-
+.section-divider {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+  }
 
   /* contact */
+  .contact {
+    padding: 20px;
+  }
 .contact .col-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 6rem;
+    border-top: 0.2rem;
+    
   }
   
   .contact .col-container .col h2 {
@@ -383,20 +424,25 @@
   /* contact */
   /* footer */
 .footer {
-    border-top: rem solid var(--light-bg);
-    text-align: center;
-  }
-  
-  .footer .socials ion-icon {
-    font-size: 2.5rem;
-    
-    background-color: var(--light-bg);
-    border-radius: 30%;
-    padding: 3rem;
-    margin: 0 1rem;
-    cursor: pointer;
-  }
-  
+  border-top: 0.2rem solid var(--light-bg);
+  text-align: center;
+  background-color: #add8e6;
+  padding: 20px;
+}
+
+.footer .socials ion-icon {
+  font-size: 2.5rem;
+  border-radius: 100%;
+  padding: 2rem;
+  margin: 0.1rem;
+  cursor: pointer;
+}
+
+.footer p {
+  font-size: 1.9rem;
+  color: var(--#00ff00);
+  margin-top: 5rem;
+}
  
   /* footer */
   /* media queries */
@@ -503,10 +549,8 @@
             <div class="box">
               <h1 class="heading">About <span>Me</span></h1>
               <p>
-                I'm Shaik Rizwana an MCA graduate passionate about Data Analyst. I've got a strong technical foundation in Visualization, programming and databases. 
-          Proficient in Python and SQL, I'm eager to turn complex data into actionable insights. I believe in continuous learning . </p>
-          <p>I am actively seeking opportunities in the field of data analysis, where I can leverage my analytical
-                 mindset and technical prowess. If you're looking for a dedicated and quick-learning data analyst, let's connect and explore the possibilities!
+                I'm Shaik Rizwana an MCA graduate passionate about Data Analyst. I've got a strong technical foundation in Visualization, programming and databases. Proficient in Python and SQL, I'm eager to turn complex data into actionable insights. I believe in continuous learning . I am actively seeking opportunities in the field of data analysis, where I can leverage my analytical mindset and technical prowess. If you're looking for a dedicated and quick-learning data analyst, let's connect and explore the possibilities! </p>
+          <p> Beyond technical skills, I am a proactive problem solver and an effective communicator. I am eager to bring my skills to a dynamic organization where my passion for data analysis can contribute to informed decision-making processes. I am enthusiastic about new challenges and collaborations. If you have any questions or opportunities, feel free to reach out. Thank you for exploring my portfolio!
             </p>
             
               <a href="#" class="btn">hire me</a>
@@ -515,6 +559,7 @@
           </div>
         </section>
         <!-- about section ends -->
+        <hr class="section-divider">
         <!-- resume section starts -->
       <section class="resume" id="resume">
           <h1 class="heading">My <span>Resume</span></h1>
@@ -565,7 +610,7 @@
             
         </section>
         <!-- resume section ends -->
-      
+      <hr class="section-divider">
         <!-- Certifications section starts -->
       <section class="certificate" id="certificate">
           <h1 class="heading">Featured <span>Certificate</span></h1>
@@ -579,17 +624,10 @@
                 </div>
               </div>
             </div>
+             
              <div class="box">
               <div class="image">
-                <img src="https://courses.cognitiveclass.ai/certificates/77e582b5c701481399534b2ed0a00db0" alt="" />
-                <div class="content">
-                  <h2>Python for Data Science</h2>
-                </div>
-              </div>
-            </div>
-             <div class="box">
-              <div class="image">
-                <img src="https://media.licdn.com/dms/image/sync/D5627AQHyMMi1iA7hUA/articleshare-shrink_1280_800/0/1700975148286?e=1701583200&v=beta&t=lmKKz1kY63hEskkFJTgN6thF0CFr8VL-8ROXg_gTH4Q" alt="" />
+                <img src="https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/3729861/original/Shaik_Rizwana20231125-72-ow23qz.jpg" alt="" />
                 <div class="content">
                   <h2>Data Visualization with Power Bi</h2>
                 </div>
@@ -607,7 +645,7 @@
         
             <div class="box">
               <div class="image">
-                <img src="https://media.licdn.com/dms/image/sync/D5627AQFauIch5RBExQ/articleshare-shrink_1280_800/0/1700714059222?e=1701320400&v=beta&t=Oi7W1FYtR38EquktNipm5ifBjxNPBSfy9p-4PivYDj4" alt="" />
+                <img src="https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/3662846/original/Shaik_Rizwana20231111-72-6kbpe3.jpg" alt="" />
                 <div class="content">
                   <h2>MySQL</h2>
                 </div>
@@ -616,7 +654,7 @@
         
             <div class="box">
               <div class="image">
-                <img src="https://media.licdn.com/dms/image/sync/C5627AQGhCpnElCJP5g/articleshare-shrink_1280_800/0/1679901484842?e=1701320400&v=beta&t=yIPjgprGLHp2ArCZMPTchFVhGfX7xWBR8y4pxCKkDcg" alt="" />
+                <img src="https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/2071105/original/Sk_Rizwana20230114-64-1447ib0.jpg" alt="" />
                 <div class="content">
                   <h2>HTML</h2>
                 </div>
@@ -625,7 +663,7 @@
         
             <div class="box">
               <div class="image">
-                <img src="https://media.licdn.com/dms/image/sync/D5627AQG13J8P0txthQ/articleshare-shrink_1280_800/0/1685624579741?e=1701320400&v=beta&t=U_SZ8poqrC809NK-Md5CbiLDho9w_qYFGs1AWAo5KOo" alt="" />
+                <img src="https://dtmvamahs40ux.cloudfront.net/ComplementaryCourseCertificate/763719/original/Sk_Rizwana20220202-14628-161ilso.jpg" alt="" />
                 <div class="content">
                   <h2>Basics of Java</h2>
                 </div>
@@ -634,7 +672,7 @@
          </div>
         </section>
         <!-- Certifications section ends -->
-      
+      <hr class="section-divider">
       
         <!-- project  section starts -->
       <section class="Projects" id="Projects">
@@ -645,10 +683,8 @@
                  <div class="box">
                 <h3>Project Title - KNOWLEDGE BASED APPROACH TO DETECT POTENTIALLY RISKY WEBSITES</h3>
                 <p>
-              Overview: This Project aims the internet safer using Knowledge and Technology</br>
-                  to detect risky websites and The "Knowledge-Based Approach to Detect Potentially Risky Websites" project utilizes a data-driven methodology, 
-          incorporating a diverse knowledge base and advanced algorithms to evaluate websites for potential risks. By considering factors </br>such as historical data, 
-          user interactions, and emerging threat patterns, the system provides a robust mechanism for identifying and categorizing risky websites. The project focuses on real-time monitoring, employing machine learning for adaptive risk detection and a user-friendly interface, contributing to effective and informed decision-making in online security.
+              OVERVIEW: This Project aims the internet safer using Knowledge and Technology to detect risky websites and The "Knowledge-Based Approach to Detect Potentially Risky Websites" project utilizes a data-driven methodology, 
+          incorporating a diverse knowledge base and advanced algorithms to evaluate websites for potential risks. By considering factors such as historical data, user interactions, and emerging threat patterns, the system provides a robust mechanism for identifying and categorizing risky websites. The project focuses on real-time monitoring, employing machine learning for adaptive risk detection and a user-friendly interface, contributing to effective and informed decision-making in online security.
                 </p>
                </div>
           <h2>Dashboards</h2>
@@ -665,6 +701,7 @@
               </div>
       </section>
       <!-- project  section ends -->
+      <hr class="section-divider">
       
         <!-- contact section starts -->
       <section class="contact" id="contact">
@@ -704,13 +741,13 @@
           <div class="socials">
             <a href="https://www.gmail.com" class="btn"> <ion-icon name="logo-google"></ion-icon></a>
             <a href="https://www.linkedin.com/in/shaik-rizwana1/" class="btn"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://github.com/Rizwana56/portfolio.github.io.git" class="btn"> <ion-icon name="logo-github"></ion-icon></a>
+    <p>desinged and developed by Rizwana</p>
+   
           </div>
           
         </section>
         <!-- footer section ends -->
       
       </body>
-      </html>
-
-
-              
+    </html>
